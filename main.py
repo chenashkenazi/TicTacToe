@@ -18,104 +18,72 @@ playerTwoLbl.grid(row=2, column=0)
 #For first person turn.
 turn = 1
 
-def clicked1():
+def clicked(num):
     global turn
-    if btn1["text"] == " ":   #For getting the text of a button
+    if num == 1:
         if turn == 1:
             turn = 2
             btn1["text"] = "X"
         elif turn == 2:
             turn = 1
             btn1["text"] = "O"
-        check()
-
-def clicked2():
-    global turn
-    if btn2["text"] == " ":
+    elif num == 2:
         if turn == 1:
             turn = 2
             btn2["text"] = "X"
         elif turn == 2:
             turn = 1
             btn2["text"] = "O"
-        check()
-
-def clicked3():
-    global turn
-    if btn3["text"] == " ":
+    elif num == 3:
         if turn == 1:
             turn = 2
             btn3["text"] = "X"
         elif turn == 2:
             turn = 1
             btn3["text"] = "O"
-        check()
-
-def clicked4():
-    global turn
-    if btn4["text"] == " ":
+    elif num == 4:
         if turn == 1:
             turn = 2
             btn4["text"] = "X"
         elif turn == 2:
             turn = 1
             btn4["text"] = "O"
-        check()
-
-def clicked5():
-    global turn
-    if btn5["text"] == " ":
+    elif num == 5:
         if turn == 1:
             turn = 2
-            btn4["text"] = "X"
+            btn5["text"] = "X"
         elif turn == 2:
             turn = 1
             btn5["text"] = "O"
-        check()
-
-def clicked6():
-    global turn
-    if btn6["text"] == " ":
+    elif num == 6:
         if turn == 1:
             turn = 2
-            btn4["text"] = "X"
+            btn6["text"] = "X"
         elif turn == 2:
             turn = 1
             btn6["text"] = "O"
-        check()
-
-def clicked7():
-    global turn
-    if btn7["text"] == " ":
+    elif num == 7:
         if turn == 1:
             turn = 2
-            btn4["text"] = "X"
+            btn7["text"] = "X"
         elif turn == 2:
             turn = 1
             btn7["text"] = "O"
-        check()
-
-def clicked8():
-    global turn
-    if btn8["text"] == " ":
+    elif num == 8:
         if turn == 1:
             turn = 2
-            btn4["text"] = "X"
+            btn8["text"] = "X"
         elif turn == 2:
             turn = 1
             btn8["text"] = "O"
-        check()
-
-def clicked9():
-    global turn
-    if btn9["text"] == " ":
+    elif num == 9:
         if turn == 1:
             turn = 2
-            btn4["text"] = "X"
+            btn9["text"] = "X"
         elif turn == 2:
             turn = 1
             btn9["text"] = "O"
-        check()
+    check()
 
 flag = 1
 
@@ -167,23 +135,23 @@ def win(player):
     window.destroy()  # is used to close the program
 
 
-btn1 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command=clicked1)
+btn1 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command = lambda: clicked(1))
 btn1.grid(column=1, row=1)
-btn2 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command=clicked2)
+btn2 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command = lambda: clicked(2))
 btn2.grid(column=2, row=1)
-btn3 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command=clicked3)
+btn3 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command = lambda: clicked(3))
 btn3.grid(column=3, row=1)
-btn4 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command=clicked4)
+btn4 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command = lambda: clicked(4))
 btn4.grid(column=1, row=2)
-btn5 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command=clicked5)
+btn5 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command = lambda: clicked(5))
 btn5.grid(column=2, row=2)
-btn6 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica','20'), command=clicked6)
+btn6 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica','20'), command = lambda: clicked(6))
 btn6.grid(column=3, row=2)
-btn7 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command=clicked7)
+btn7 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command = lambda: clicked(7))
 btn7.grid(column=1, row=3)
-btn8 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command=clicked8)
+btn8 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica', '20'), command = lambda: clicked(8))
 btn8.grid(column=2, row=3)
-btn9 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica',' 20'), command=clicked9)
+btn9 = Button(window, text=" ", bg="yellow", fg="Black", width=3, height=1, font=('Helvetica',' 20'), command = lambda: clicked(9))
 btn9.grid(column=3, row=3)
 
 window.mainloop()

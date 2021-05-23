@@ -20,69 +20,32 @@ turn = 1
 
 def clicked(num):
     global turn
+    
+    if turn == 1:
+      turn = 2
+      sign = "X"
+    elif turn == 2:
+      turn = 1
+      sign = "O"
+      
     if num == 1:
-        if turn == 1:
-            turn = 2
-            btn1["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn1["text"] = "O"
+      btn1["text"] = sign
     elif num == 2:
-        if turn == 1:
-            turn = 2
-            btn2["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn2["text"] = "O"
+      btn2["text"] = sign
     elif num == 3:
-        if turn == 1:
-            turn = 2
-            btn3["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn3["text"] = "O"
+      btn3["text"] = sign
     elif num == 4:
-        if turn == 1:
-            turn = 2
-            btn4["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn4["text"] = "O"
+      btn4["text"] = sign
     elif num == 5:
-        if turn == 1:
-            turn = 2
-            btn5["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn5["text"] = "O"
+      btn5["text"] = sign
     elif num == 6:
-        if turn == 1:
-            turn = 2
-            btn6["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn6["text"] = "O"
+      btn6["text"] = sign
     elif num == 7:
-        if turn == 1:
-            turn = 2
-            btn7["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn7["text"] = "O"
+      btn7["text"] = sign
     elif num == 8:
-        if turn == 1:
-            turn = 2
-            btn8["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn8["text"] = "O"
+      btn8["text"] = sign
     elif num == 9:
-        if turn == 1:
-            turn = 2
-            btn9["text"] = "X"
-        elif turn == 2:
-            turn = 1
-            btn9["text"] = "O"
+      btn9["text"] = sign
     check()
 
 flag = 1
